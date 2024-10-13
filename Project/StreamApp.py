@@ -49,6 +49,7 @@ st.pyplot(sns.pairplot(df_forplot, hue = 'NTREATMENT'))
 st.subheader('Correlations')
 df_cor = df_forplot.loc[:,['NTREATMENT', 'A', 'E', 'gsw', 'Ci', 'KERNELDRYWT_PERPLANT']]
 
+# Encode NTreatment as 1 for H or 0 for L to use in corr analysis
 label_map = {'H': 1, 'L': 0}
 df_cor['NTREATMENT'] = np.array([label_map[label] for label in df_cor['NTREATMENT']])
 f3, ax = plt.subplots()
