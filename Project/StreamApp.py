@@ -16,9 +16,9 @@ with col1:
 with col2:
     st.header("Gas exchange parameters")
     md = ''' * A = CO2 assimilation rate (µmol CO2 m⁻² s⁻¹)  
-        * E = Transpiration of H2O (mol H2O m⁻² s⁻¹)  
-        * gsw = stomatal conductance (mol H2O m⁻² s⁻¹)  
-        * Ci = interceullar CO2 concentration ready for assimilation (ppm)
+             * E = Transpiration of H2O (mol H2O m⁻² s⁻¹)  
+             * gsw = stomatal conductance (mol H2O m⁻² s⁻¹)  
+             * Ci = interceullar CO2 concentration ready for assimilation (ppm)
         '''
     st.markdown(md)
 
