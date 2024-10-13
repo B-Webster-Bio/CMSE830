@@ -49,7 +49,8 @@ tab1 = st.pyplot(fig = f2)
 df_cor = df_forplot.loc[:,['NTREATMENT', 'A', 'E', 'gsw', 'Ci', 'KERNELDRYWT_PERPLANT']]
 le = LabelEncoder()
 df_cor['NTREATMENT'] = le.fit_transform(df_cor['NTREATMENT'])
-f3 = sns.heatmap(df_cor.corr())
+f3, ax = plt.subplots()
+sns.heatmap(df_cor.corr(), ax=ax)
 tab2 = st.pyplot(fig = f3)
 
 
