@@ -4,6 +4,7 @@ import numpy as np
 import hiplot as hip
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.preprocessing import LabelEncoder
 
 st.title('Gas Exchange in Corn Inbreds')
 md = '''"Breathing" or gas exchange of Carbon Dioxide (CO2) and water (H2O) through leaf stomata is an important process in plant biology that is 
@@ -45,7 +46,10 @@ df_forplot = df.loc[:,['NTREATMENT', 'GENOTYPE', 'SUBPOPULATION', 'A', 'E', 'gsw
 f2 = sns.pairplot(df_forplot, hue = 'NTREATMENT')
 tab1 = st.pyplot(fig = f2)
 
-f3 = sns.heatmap(df_forplot.corr())
+df_cor = df_forplot.loc[:['NTREATMENT', 'A', 'E', 'gsw', 'Ci', 'KERNELDRYWT_PERPLANT']]
+le = LabelEncoder()
+df_cor['NTREATMENT'] = le.fit_transform(df_cor['NTREATMENT'])
+f3 = sns.heatmap(df_cor.corr())
 tab2 = st.pyplot(fig = f3)
 
 
