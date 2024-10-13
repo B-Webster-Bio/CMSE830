@@ -4,6 +4,7 @@ import numpy as np
 import hiplot as hip
 import os
 
+st.image('Project/Supp/LeafGasEx.png', caption = 'Gas exchange through leaf stomata')
 st.write(f"Current working directory: {os.getcwd()}")
 df = pd.read_csv('Project/Data/PlotFieldData.csv')
 
