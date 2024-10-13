@@ -34,10 +34,14 @@ st.image('Project/Supp/Licor.PNG', caption = 'Licor 6800 measuring plant leaf in
 # Note that when hosted on community cloud the root directory defaults to the top level of github dir
 df = pd.read_csv('Project/Data/PlotFieldData.csv')
 
+df_subpop = df.drop_duplicates(subset='GENOTYPE')
+f1 = sns.histplot(data=df_subpop, x = 'SUBPOPULATION', hue = 'SUBPOPULATION')
+st.pyplot(fig = f1)
+
 df_b73 = df.loc[df['GENOTYPE'] == 'B73',['NTREATMENT', 'A', 'E', 'gsw', 'Ci']]
 df_forplot = df.loc[:,['NTREATMENT', 'A', 'E', 'gsw', 'Ci']]
-f1 = sns.pairplot(df_forplot, hue = 'NTREATMENT')
-st.pyplot(fig = f1)
+f2 = sns.pairplot(df_forplot, hue = 'NTREATMENT')
+st.pyplot(fig = f2)
 
 # 
 xp = hip.Experiment.from_dataframe(df_forplot)
