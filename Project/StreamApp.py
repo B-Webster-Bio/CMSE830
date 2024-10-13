@@ -7,7 +7,7 @@ import seaborn as sns
 
 st.title('Gas Exchange in Corn Hybrids')
 st.image('Project/Supp/LeafGasEx.png', caption = 'Gas exchange through leaf stomata')
-st.write(f"Current working directory: {os.getcwd()}")
+#st.write(f"Current working directory: {os.getcwd()}")
 df = pd.read_csv('Project/Data/PlotFieldData.csv')
 
 df_forplot = df.loc[df['GENOTYPE'] == 'B73',['NTREATMENT', 'A', 'E', 'gsw', 'Ci']]
