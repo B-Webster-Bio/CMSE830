@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 st.title('Gas Exchange in Corn Inbreds')
-st.image('Project/Supp/LeafGasEx.png', caption = 'Gas exchange through leaf stomata')
 
 col1, col2 = st.columns(2)
 
@@ -21,7 +20,7 @@ with col2:
         * gsw = stomatal conductance (mol H2O m⁻² s⁻¹)  
         * Ci = interceullar CO2 concentration ready for assimilation (ppm)
         '''
-st.markdown(md)
+    st.markdown(md)
 
 
 st.subheader('Gas exchange can be measured by a Licor')
