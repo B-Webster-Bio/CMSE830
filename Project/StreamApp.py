@@ -42,28 +42,16 @@ st.markdown("____")
 df_b73 = df.loc[df['GENOTYPE'] == 'B73',['NTREATMENT', 'A', 'E', 'gsw', 'Ci', 'KERNELDRYWT_PERPLANT']]
 df_forplot = df.loc[:,['NTREATMENT', 'GENOTYPE', 'SUBPOPULATION', 'A', 'E', 'gsw', 'Ci', 'KERNELDRYWT_PERPLANT']]
 
-tab1, tab2 = st.tabs(["pairplot", "correlations"])
-with tab1:
-    st.pyplot(sns.pairplot(df_forplot, hue = 'NTREATMENT'))
+st.subheader('Pairplot')
+st.pyplot(sns.pairplot(df_forplot, hue = 'NTREATMENT'))
 
-with tab2:
-    df_cor = df_forplot.loc[:,['NTREATMENT', 'A', 'E', 'gsw', 'Ci', 'KERNELDRYWT_PERPLANT']]
-    le = LabelEncoder()
-    df_cor['NTREATMENT'] = le.fit_transform(df_cor['NTREATMENT'])
-    f3, ax = plt.subplots()
-    sns.heatmap(df_cor.corr(), ax=ax)
-    st.pyplot(f3)
-
-#f2 = sns.pairplot(df_forplot, hue = 'NTREATMENT')
-#tab1 = st.pyplot(fig = f2)
-'''
+st.subheader('Correlations')
 df_cor = df_forplot.loc[:,['NTREATMENT', 'A', 'E', 'gsw', 'Ci', 'KERNELDRYWT_PERPLANT']]
 le = LabelEncoder()
 df_cor['NTREATMENT'] = le.fit_transform(df_cor['NTREATMENT'])
 f3, ax = plt.subplots()
-sns.heatmap(df_cor.corr(), ax=ax)
-tab2st.pyplot(fig = f3)
-'''
+sns.heatmap(df_cor.corr(), ax=ax, annot=True)
+st.pyplot(f3)
 
 
 st.subheader('Interactive HiPlot')
