@@ -9,7 +9,7 @@ st.title('Gas Exchange in Corn Hybrids')
 st.image('Project/Supp/LeafGasEx.png', caption = 'Gas exchange through leaf stomata')
 
 st.subheader('Gas exchange can be measured by a Licor')
-st.image('Project/Supp/Licor.png', caption = 'Licor 6800 measuring plant in the field')
+st.image('Project/Supp/Licor.PNG', caption = 'Licor 6800 measuring plant in the field')
 # Note that when hosted on community cloud the root directory defaults to the top level of github dir
 md = ''' * A = CO2 assimilation rate (µmol CO2 m⁻² s⁻¹)  
  * E = Transpiration of H2O (mol H2O m⁻² s⁻¹)  
