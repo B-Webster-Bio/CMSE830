@@ -32,6 +32,7 @@ st.image('Project/Supp/Licor.PNG', caption = 'Licor 6800 measuring plant leaf in
 # Note that when hosted on community cloud the root directory defaults to the top level of github dir
 df = pd.read_csv('Project/Data/PlotFieldData.csv')
 
+st.subheader('Represented maize subpopulations')
 df_subpop = df.drop_duplicates(subset='GENOTYPE')
 f1 = sns.displot(data=df_subpop, x = 'SUBPOPULATION', hue = 'SUBPOPULATION', kind='hist')
 f1.set_xticklabels(rotation = 80)
