@@ -40,7 +40,7 @@ f1.set_xticklabels(rotation = 45)
 st.pyplot(fig = f1)
 
 df_b73 = df.loc[df['GENOTYPE'] == 'B73',['NTREATMENT', 'A', 'E', 'gsw', 'Ci']]
-df_forplot = df.loc[:,['NTREATMENT', 'GENOTYPE', 'A', 'E', 'gsw', 'Ci']]
+df_forplot = df.loc[:,['NTREATMENT', 'GENOTYPE', 'SUBPOPULATION', 'A', 'E', 'gsw', 'Ci']]
 f2 = sns.pairplot(df_forplot, hue = 'NTREATMENT')
 st.pyplot(fig = f2)
 
