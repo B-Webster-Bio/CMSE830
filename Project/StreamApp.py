@@ -43,6 +43,7 @@ df_forplot = df.loc[:,['NTREATMENT', 'GENOTYPE', 'SUBPOPULATION', 'A', 'E', 'gsw
 f2 = sns.pairplot(df_forplot, hue = 'NTREATMENT')
 st.pyplot(fig = f2)
 
-# 
+
+st.subheader('Interactive HiPlot')
 xp = hip.Experiment.from_dataframe(df_forplot)
 st.components.v1.html(xp.to_html(), height=1500)
