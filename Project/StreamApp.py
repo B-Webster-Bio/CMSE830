@@ -45,6 +45,9 @@ df_forplot = df.loc[:,['NTREATMENT', 'GENOTYPE', 'SUBPOPULATION', 'A', 'E', 'gsw
 f2 = sns.pairplot(df_forplot, hue = 'NTREATMENT')
 tab1 = st.pyplot(fig = f2)
 
+f3 = sns.heatmap(df_forplot.corr(), hue = 'NTREATMENT')
+tab2 = st.pyplot(fig = f3)
+
 
 st.subheader('Interactive HiPlot')
 xp = hip.Experiment.from_dataframe(df_forplot)
