@@ -8,6 +8,22 @@ import seaborn as sns
 st.title('Gas Exchange in Corn Inbreds')
 st.image('Project/Supp/LeafGasEx.png', caption = 'Gas exchange through leaf stomata')
 
+col1, col2 = st.columns(2)
+
+with col1:
+    st.header("Conceptual graphic of gas exchange")
+    st.image('Project/Supp/LeafGasEx.png', caption = 'Gas exchange through leaf stomata')
+
+with col2:
+    st.header("Gas exchange parameters")
+    md = ''' * A = CO2 assimilation rate (µmol CO2 m⁻² s⁻¹)  
+        * E = Transpiration of H2O (mol H2O m⁻² s⁻¹)  
+        * gsw = stomatal conductance (mol H2O m⁻² s⁻¹)  
+        * Ci = interceullar CO2 concentration ready for assimilation (ppm)
+        '''
+st.markdown(md)
+
+
 st.subheader('Gas exchange can be measured by a Licor')
 st.image('Project/Supp/Licor.PNG', caption = 'Licor 6800 measuring plant leaf in the field')
 
@@ -26,6 +42,6 @@ df_forplot = df.loc[:,['NTREATMENT', 'A', 'E', 'gsw', 'Ci']]
 f1 = sns.pairplot(df_forplot, hue = 'NTREATMENT')
 st.pyplot(fig = f1)
 
-st.write('B73 ONLY')
+# 
 xp = hip.Experiment.from_dataframe(df_forplot)
 st.components.v1.html(xp.to_html(), height=1500)
