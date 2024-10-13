@@ -20,13 +20,10 @@ with col1:
 
 with col2:
     st.header("Gas exchange parameters")
-    md = '''* A = CO2 assimilation rate (µmol CO2 m⁻² s⁻¹)  
-            * E = Transpiration of H2O (mol H2O m⁻² s⁻¹)  
-            * gsw = stomatal conductance to H2O (mol H2O m⁻² s⁻¹)  
-            * Ci = interceullar CO2 concentration ready for assimilation (ppm)
-        '''
-    st.markdown(md)
-
+    st.markdown("* A = CO2 assimilation rate (µmol CO2 m⁻² s⁻¹)")
+    st.markdown("* E = Transpiration of H2O (mol H2O m⁻² s⁻¹)")
+    st.markdown("* gsw = stomatal conductance to H2O (mol H2O m⁻² s⁻¹)")
+    st.markdown("* Ci = interceullar CO2 concentration ready for assimilation (ppm)")
 
 st.subheader('Gas exchange can be measured by a Licor')
 st.image('Project/Supp/Licor.PNG', caption = 'Licor 6800 measuring plant leaf in the field')
