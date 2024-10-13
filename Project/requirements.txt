@@ -3,3 +3,4 @@ hiplot
 pandas
 matplotlib
 seaborn
+sklearn.preprocessing
