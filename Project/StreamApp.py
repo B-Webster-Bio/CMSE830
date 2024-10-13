@@ -46,7 +46,7 @@ df_forplot = df.loc[:,['NTREATMENT', 'GENOTYPE', 'SUBPOPULATION', 'A', 'E', 'gsw
 f2 = sns.pairplot(df_forplot, hue = 'NTREATMENT')
 tab1 = st.pyplot(fig = f2)
 
-df_cor = df_forplot.loc[:['NTREATMENT', 'A', 'E', 'gsw', 'Ci', 'KERNELDRYWT_PERPLANT']]
+df_cor = df_forplot.loc[:,['NTREATMENT', 'A', 'E', 'gsw', 'Ci', 'KERNELDRYWT_PERPLANT']]
 le = LabelEncoder()
 df_cor['NTREATMENT'] = le.fit_transform(df_cor['NTREATMENT'])
 f3 = sns.heatmap(df_cor.corr())
