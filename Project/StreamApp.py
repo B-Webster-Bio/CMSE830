@@ -35,7 +35,7 @@ st.image('Project/Supp/Licor.PNG', caption = 'Licor 6800 measuring plant leaf in
 df = pd.read_csv('Project/Data/PlotFieldData.csv')
 
 df_subpop = df.drop_duplicates(subset='GENOTYPE')
-f1 = sns.histplot(data=df_subpop, x = 'SUBPOPULATION', hue = 'SUBPOPULATION')
+f1 = sns.displot(data=df_subpop, x = 'SUBPOPULATION', hue = 'SUBPOPULATION', kind='hist')
 st.pyplot(fig = f1)
 
 df_b73 = df.loc[df['GENOTYPE'] == 'B73',['NTREATMENT', 'A', 'E', 'gsw', 'Ci']]
