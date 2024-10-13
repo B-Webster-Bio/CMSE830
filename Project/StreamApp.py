@@ -26,10 +26,10 @@ with col2:
 st.subheader('Gas exchange can be measured by a Licor')
 st.image('Project/Supp/Licor.PNG', caption = 'Licor 6800 measuring plant leaf in the field')
 
-md = ''' * A = CO2 assimilation rate (µmol CO2 m⁻² s⁻¹)  
-         * E = Transpiration of H2O (mol H2O m⁻² s⁻¹)  
-         * gsw = stomatal conductance of H2O (mol H2O m⁻² s⁻¹)  
-         * Ci = interceullar CO2 concentration ready for assimilation (ppm)
+md = '''* A = CO2 assimilation rate (µmol CO2 m⁻² s⁻¹)  
+        * E = Transpiration of H2O (mol H2O m⁻² s⁻¹)  
+        * gsw = stomatal conductance of H2O (mol H2O m⁻² s⁻¹)  
+        * Ci = interceullar CO2 concentration ready for assimilation (ppm)
 '''
 st.markdown(md)
 
