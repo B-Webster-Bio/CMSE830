@@ -36,10 +36,10 @@ df = pd.read_csv('Project/Data/PlotFieldData.csv')
 
 df_subpop = df.drop_duplicates(subset='GENOTYPE')
 f1 = sns.displot(data=df_subpop, x = 'SUBPOPULATION', hue = 'SUBPOPULATION', kind='hist')
-f1.set_xticklabels(rotation = 45)
+f1.set_xticklabels(rotation = 80)
 st.pyplot(fig = f1)
 
-df_b73 = df.loc[df['GENOTYPE'] == 'B73',['NTREATMENT', 'A', 'E', 'gsw', 'Ci']]
+df_b73 = df.loc[df['GENOTYPE'] == 'B73',['NTREATMENT', 'A', 'E', 'gsw', 'Ci', 'KERNELDRYWT_PERPLANT']]
 df_forplot = df.loc[:,['NTREATMENT', 'GENOTYPE', 'SUBPOPULATION', 'A', 'E', 'gsw', 'Ci']]
 f2 = sns.pairplot(df_forplot, hue = 'NTREATMENT')
 st.pyplot(fig = f2)
