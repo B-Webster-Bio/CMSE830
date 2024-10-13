@@ -39,9 +39,11 @@ st.markdown("____")
 
 
 df_b73 = df.loc[df['GENOTYPE'] == 'B73',['NTREATMENT', 'A', 'E', 'gsw', 'Ci', 'KERNELDRYWT_PERPLANT']]
+
+tab1, tab2 = st.tabs(["pairplot", "correlations"])
 df_forplot = df.loc[:,['NTREATMENT', 'GENOTYPE', 'SUBPOPULATION', 'A', 'E', 'gsw', 'Ci', 'KERNELDRYWT_PERPLANT']]
 f2 = sns.pairplot(df_forplot, hue = 'NTREATMENT')
-st.pyplot(fig = f2)
+tab1 = st.pyplot(fig = f2)
 
 
 st.subheader('Interactive HiPlot')
