@@ -48,8 +48,9 @@ st.pyplot(sns.pairplot(df_forplot, hue = 'NTREATMENT'))
 
 st.subheader('Correlations')
 df_cor = df_forplot.loc[:,['NTREATMENT', 'A', 'E', 'gsw', 'Ci', 'KERNELDRYWT_PERPLANT']]
-le = LabelEncoder()
-df_cor['NTREATMENT'] = le.fit_transform(df_cor['NTREATMENT'])
+
+label_map = {'H': 1, 'L': 0}
+df_cor['NTREATMENT'] = np.array([label_map[label] for label in df_cor['NTREATMENT']])
 f3, ax = plt.subplots()
 sns.heatmap(df_cor.corr(), ax=ax, annot=True, vmin = -1, vmax = 1)
 st.pyplot(f3)
