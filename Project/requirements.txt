@@ -1,4 +1,5 @@
 streamlit
 hiplot
 pandas
-
+matplotlib
+seaborn
