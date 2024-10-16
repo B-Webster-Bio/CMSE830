@@ -1,5 +1,6 @@
 import streamlit as st
 import hiplot as hip
+import pandas as pd
 
 
 # Note that when hosted on community cloud the root directory defaults to the top level of github dir
