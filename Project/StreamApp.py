@@ -55,13 +55,9 @@ df_cor['NTREATMENT'] = np.array([label_map[label] for label in df_cor['NTREATMEN
 f3, ax = plt.subplots()
 sns.heatmap(df_cor.corr(), ax=ax, annot=True, vmin = -1, vmax = 1)
 st.pyplot(f3)
+st.markdown("____")
 st.subheader('Preliminary Results:')
 st.markdown('''There appears to be a mildy strong association between yield and Nitrogen Treatment, this is well known. 
     There also appears to be a similar strength relationship between Yield and gas exchange parameters which is less well known. In the future we will break down the relationship with each N treatment respectively 
     to get a better idea of how gas exchange traits change depending on the treatment.''')
 
-
-# Interactive HiPlot
-st.subheader('Interactive HiPlot')
-xp = hip.Experiment.from_dataframe(df_forplot)
-st.components.v1.html(xp.to_html(), height=1500)
