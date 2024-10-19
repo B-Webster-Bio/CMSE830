@@ -15,6 +15,8 @@ Understanding how gas exchange traits and yield change between N treatments over
 '''
 st.markdown(md)
 
+md = '* Data cleaning and exploration in "Notebooks/Task0_DataIngestion.ipynb"'
+st.markdown(md)
 
 col1, col2 = st.columns(2)
 with col1:
@@ -85,6 +87,8 @@ with tab3:
 st.markdown("____")
 st.subheader('Preliminary Results:')
 st.markdown('''There appears to be a mildy strong association between yield and Nitrogen Treatment, this is well known. 
-    There also appears to be a similar strength relationship between Yield and gas exchange parameters which is less well known. In the future we will break down the relationship with each N treatment respectively 
-    to get a better idea of how gas exchange traits change depending on the treatment.''')
+    There also appears to be a similar strength relationship between Yield and gas exchange parameters which is less well known. 
+    The relationship remains mostly the same in High and Low N treatments respectively. CO2 assimilation rate (A) has the largest change 
+    between H (0.15) and L (0.26) while the water related traits, gsw and E, remain stable. These results warrant further investigation. 
+    In the future I will incorporate remote sensing data to investigate how canopy level refelctance, gas exchange, and yield are intertwined.''')
 
