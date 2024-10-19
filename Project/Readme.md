@@ -1,4 +1,4 @@
-# Gas Exchange in Corn Inbreds :corn:
+# Gas Exchange in Corn Inbreds :corn: :dash:
  - Create a streamlit app to help enable the exploration of gas exchange traits and yield measurements collected in two different Nitrogen fertilizer treatments by the Thompson Lab in 2022 and 2023. In part 2 of the project I would like to incorporate remote sensing data collected on the same set of samples and identify the most important variables that predict yield level in high and low N respectively.
  - [Link to App](https://project-afeud7bdkfvtxsd4p2cbsm.streamlit.app/)
 
