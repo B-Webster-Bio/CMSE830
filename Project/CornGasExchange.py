@@ -28,6 +28,8 @@ with col2:
     st.markdown("* E = Transpiration of H2O (mol H2O m⁻² s⁻¹)")
     st.markdown("* gsw = stomatal conductance to H2O (mol H2O m⁻² s⁻¹)")
     st.markdown("* Ci = interceullar CO2 concentration ready for assimilation (ppm)")
+    st.header("Yield")
+    st.markdown("* KernelDryWt_PerPlant = Avg grams of grain per plant")
 
 st.subheader('Gas exchange can be measured by a Licor')
 st.image('Project/Supp/Licor.PNG', caption = 'Licor 6800 measuring plant leaf in the field')
