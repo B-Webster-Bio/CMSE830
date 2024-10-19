@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
 
-st.title('Gas Exchange in Corn Inbreds')
+st.title('Gas Exchange in Corn Inbreds :corn: :dash:')
 md = '''"Breathing" or gas exchange of Carbon Dioxide (CO2) and water (H2O) through leaf stomata is an important process in plant biology that is 
 associated with how much carbon and water a plant is processing. In theory these traits are related to grain production but harnessing this information for plant breeding is tricky. 
 Nitrogen fertilizer is an important input that is well known to influence the total amount of grain production. 
